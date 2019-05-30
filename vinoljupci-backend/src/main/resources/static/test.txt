@@ -1,0 +1,47 @@
+
+
+
+Za jednu firmu na jednom eventu:
+
+SELECT w.name, f.name, f.percentage, b.timestamp, b.bill_sum FROM wine_event_firm wf cross join bill_parts bp
+inner JOIN wine_event w on wf.wine_event_id=w.id_wine_event 
+inner join firm f on wf.firm_id=f.id_firm 
+inner join bill b on bp.bill_id=b.id_bill
+inner join artikli a on bp.artikl=a.id_artikli
+where f.id_firm=ID_FIRM and w.id_wine_event=ID_WINE_EVENT and a.firm=ID_FIRM;
+
+
+
+
+
+
+
+
+
+
+Za jedan unit na jednom eventu:
+
+SELECT * FROM bill b 
+inner join wine_event_firm wf ON b.event=wf.wine_event_id
+inner join firm f on wf.firm_id=f.id_firm
+inner join unit u on f.unit_id=u.id_unit
+where b.event=1 and u.id_unit= ID_UNITA; 
+
+Za jednu karticu na jednom eventu
+
+SELECT * FROM bill b 
+inner join wine_event_firm wf ON b.event=wf.wine_event_id
+inner join firm f on wf.firm_id=f.id_firm
+inner join unit u on f.unit_id=u.id_unit
+inner join card c on b.card=c.id_card
+where b.event=1 and c.id_card= ID_KARTICE; 
+
+Za prikaz koliko je koja kartica potrošila novaca na pojedinom eventu:
+
+SELECT * FROM bill b 
+inner join wine_event_firm wf ON b.event=wf.wine_event_id
+inner join firm f on wf.firm_id=f.id_firm
+inner join unit u on f.unit_id=u.id_unit
+inner join card c on b.card=c.id_card
+where (b.event=1 and c.id_card=1)
+and (b.timestamp between '2019-04-19 09:15:17' and '2019-04-19 09:27:03');

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="izvještaj_vinar" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Vinar" class="java.lang.String"/>
+	<field name="Dnevni_promet" class="java.lang.Double"/>
+	<field name="postotak_vinar" class="java.lang.Double"/>
+	<field name="Ukupno" class="java.lang.Double"/>
+	<field name="Datum" class="java.sql.Date"/>
+	<field name="Prihod_vinar" class="java.lang.Double"/>
+	<title>
+		<band height="81" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="80" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="465" y="30" width="84" height="20" uuid="3836ce65-eca3-4cad-a6de-b1818def0a2b"/>
+				<textFieldExpression><![CDATA[$F{Vinar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="415" y="30" width="50" height="20" uuid="0b3f9342-da78-4cfa-9fc5-2301c4749678">
+					<property name="com.jaspersoft.studio.element.name" value="Korisnik"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Korisnik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vinoljupci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="55" width="205" height="15" uuid="b8cc42fd-b569-497d-834d-7e854040ad18"/>
+				<text><![CDATA[facebook.com/vinoljupci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="25" width="205" height="15" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
+				<text><![CDATA[Zagreb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="40" width="205" height="15" uuid="b96f7183-44f8-43ad-ba60-43d8fbf50b6e"/>
+				<text><![CDATA[e-mail: vinoljupci@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="70" height="61" uuid="2f8ca904-5e69-4703-a525-2e82cfe18c42"/>
+				<imageExpression><![CDATA["kiss.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="60">
+			<staticText>
+				<reportElement x="20" y="10" width="100" height="30" uuid="244bfe3e-d78d-4fb9-bb6b-f746599d8ef7"/>
+				<text><![CDATA[Datum: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="10" width="100" height="30" uuid="d509569b-4892-4624-9568-becc4cc56513"/>
+				<text><![CDATA[Dnevni promet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="10" width="40" height="30" uuid="c9692218-2f7b-45ad-805f-0499c4f2acb1"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="10" width="100" height="30" uuid="b8cea3d9-4b16-4061-b635-41ae76a460b5"/>
+				<text><![CDATA[Prihod nakon postotka]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="177">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="147" width="556" height="30" backcolor="#E6E8E9" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Zahvaljujemo na suradnji!]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="-1" width="100" height="30" uuid="ef094b7c-d9c4-40f6-8633-c71235ca3aa5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84a2db48-fa54-4142-8405-399c1f7c753d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Datum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="-1" width="100" height="30" uuid="1a69dc23-6791-4795-9159-15b490eaf300"/>
+				<textFieldExpression><![CDATA[$F{Dnevni_promet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="70" width="100" height="30" uuid="11493657-1290-4e28-9fce-171dcd2513a5"/>
+				<textFieldExpression><![CDATA[$F{Ukupno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="47" height="30" uuid="53124e28-0cb3-486c-bddc-8df84134b5b3"/>
+				<textFieldExpression><![CDATA[$F{postotak_vinar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="100" height="30" uuid="078d075c-d42d-4ee0-a2fa-d957114a6106"/>
+				<textFieldExpression><![CDATA[$F{Prihod_vinar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

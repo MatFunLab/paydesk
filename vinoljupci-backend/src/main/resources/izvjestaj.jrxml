@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="izvjestaj" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02297a8d-4caa-4dfb-abbc-08959019f03c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="timestamp" class="java.util.Date"/>
+	<parameter name="wineEventName" class="java.lang.String"/>
+	<parameter name="firmName" class="java.lang.String"/>
+	<parameter name="percentage" class="java.lang.Integer"/>
+	<parameter name="billSum" class="java.lang.Integer"/>
+	<parameter name="prihod_vinar" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="60" height="30" uuid="45f130db-cefa-4318-8af3-68fb35da67d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Vinoljupci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="20" width="205" height="15" uuid="c30321ad-33e0-42dd-9966-97d15d294db0"/>
+				<text><![CDATA[e-mail: vinoljupci@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="2" width="50" height="50" uuid="696399f3-77e9-4dc2-9123-7b14e7d6d9ba"/>
+				<imageExpression><![CDATA["kiss.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="35" width="127" height="30" uuid="efbf8581-b34c-4c68-9cbb-d42e1220dc2c"/>
+				<text><![CDATA[facebook.com/vinoljupci]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="-10" width="100" height="30" uuid="59f50aa2-88af-4f8b-bbe1-ca8b52e48d57"/>
+				<textFieldExpression><![CDATA[$P{wineEventName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="12" width="100" height="30" uuid="99baf847-bb1c-40e6-a867-e1ebd2520f1e"/>
+				<textFieldExpression><![CDATA[$P{timestamp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="10" width="100" height="30" uuid="a303521c-9491-4747-afb9-6c1caecb1a4d"/>
+				<textFieldExpression><![CDATA[$P{firmName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="20" width="100" height="30" uuid="8a9f9dd5-8099-4211-95e9-3a050a8143a3"/>
+				<textFieldExpression><![CDATA[$P{billSum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="0" width="151" height="31" uuid="8294e4bd-f6c8-4ab8-b10a-6a4f123e1771"/>
+				<text><![CDATA[Ukupni promet ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="101" height="31" uuid="a62d99df-c4b6-4840-83d4-306bc9b69747"/>
+				<text><![CDATA[Postotak:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="20" width="100" height="30" uuid="15ef0d7e-30cc-439f-bea5-060d4cec5dc6"/>
+				<textFieldExpression><![CDATA[$P{percentage}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="0" width="146" height="41" uuid="588ce015-1b3b-4142-98e9-c1bbd87a5dcf"/>
+				<text><![CDATA[Za isplatu: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="20" width="100" height="30" uuid="cdacae80-6bc9-4e55-9efa-7bca004e9f9a"/>
+				<textFieldExpression><![CDATA[$P{prihod_vinar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
